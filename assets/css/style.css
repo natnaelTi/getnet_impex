@@ -22,7 +22,7 @@
 /*===========================
     1. COMMON css 
 ===========================*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
 
 :root {
@@ -732,12 +732,21 @@ p {
 .card {
   display: grid;
   place-items: center;
-  width: 80vw;
-  max-width: 21.875rem;
-  height: 28.125rem;
+  width: 18vw;
+  max-width: 15rem;
+  height: 22rem;
   overflow: hidden;
   border-radius: 0.625rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.card__subtitle {
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
 }
 
 .card>* {
@@ -757,7 +766,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-self: flex-end;
-  height: 70%;
+  height: 103%;
   padding: 12% 1.25rem 1.875rem;
   background: linear-gradient(180deg,
       hsla(0, 0%, 0%, 0) 0%,
@@ -773,6 +782,7 @@ p {
   position: relative;
   width: fit-content;
   width: -moz-fit-content;
+  font-size: 1.6em !important;
   /* Prefijo necesario para Firefox  */
 }
 
@@ -787,17 +797,17 @@ p {
 }
 
 .card__button {
-  padding: 0.75em 1.6em;
+  padding: 0.65em 1.2em;
   width: fit-content;
   width: -moz-fit-content;
   /* Prefijo necesario para Firefox  */
-  font-variant: small-caps;
+  /* font-variant: small-caps; */
   font-weight: bold;
   border-radius: 0.45em;
   border: none;
   background-color: var(--brand-color);
-  font-family: var(--font-title);
-  font-size: 1.125rem;
+  /* font-family: var(--font-title); */
+  font-size: 0.85rem;
   color: var(--black);
 }
 
@@ -1912,4 +1922,47 @@ hr {
   .tiles-main--inner p {
       font-size: 8px;
   }
+}
+
+/* .values-section {
+  width: 100vw;
+} */
+
+.values-grid {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.value-card {
+  width: 17vw;
+  height: 17vw;
+  margin: 20px 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.value-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.value-card h5 {
+  text-transform: uppercase !important;
+}
+
+.value-card p {
+  color: var(--black);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200 !important;
+  font-size: 12px;
+}
+
+.value-icon {
+  font-size: 4em !important;
 }
